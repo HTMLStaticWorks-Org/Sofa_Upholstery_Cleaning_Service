@@ -63,7 +63,12 @@
             <label class="form-label" for="login-password">Password *</label>
             <div class="pwd-input-wrap">
               <input type="password" id="login-password" class="form-input" value="VerdantDemo2026" placeholder="Enter your password" required>
-              <button type="button" class="pwd-toggle-btn" data-toggle-password="login-password">Show</button>
+              <button type="button" class="pwd-toggle-btn" data-toggle-password="login-password" aria-label="Show password" title="Toggle password visibility">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+              </button>
             </div>
             <span class="form-hint">Security note: Raw passwords are never stored in browser localStorage.</span>
           </div>
@@ -76,13 +81,9 @@
             <a href="#forgot" id="forgot-password-demo" style="color: var(--clr-primary); font-weight: 700;">Forgot password?</a>
           </div>
 
-          <button type="submit" class="btn btn--primary btn--full" style="margin-bottom: 12px;">
+          <button type="submit" class="btn btn--primary btn--full">
             <span>Sign In to Customer Dashboard</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-          </button>
-
-          <button type="button" id="quick-demo-login-btn" class="btn btn--sage btn--full">
-            Instant Demo Account Login (Eleanor Vance)
           </button>
         </form>
 

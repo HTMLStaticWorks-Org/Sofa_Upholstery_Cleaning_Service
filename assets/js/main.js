@@ -254,20 +254,6 @@
       }
     });
 
-    // Update account link & CTA login buttons when demo session exists
-    const user = getSessionUser();
-    if (user && user.name) {
-      const firstName = user.name.split(' ')[0];
-      document.querySelectorAll('.btn--nav-cta, [data-account-nav]').forEach((el) => {
-        el.innerHTML = `<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2" style="margin-right:6px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>${firstName}'s Portal</span>`;
-        el.setAttribute('href', 'dashboard.html');
-        el.setAttribute('title', `Logged in as ${user.name} — Open Customer Portal`);
-      });
-      document.querySelectorAll('.drawer-login-btn').forEach((el) => {
-        el.textContent = `Customer Portal (${firstName})`;
-        el.setAttribute('href', 'dashboard.html');
-      });
-    }
 
     // Drawer open / close helpers
     function openDrawer() {
@@ -958,7 +944,10 @@
      10. LOGIN (/login) & REGISTER (/register) FRONTEND DEMO FLOWS
      ------------------------------------------------------------------------ */
   function initAuthPages() {
-    // Password visibility toggles
+    // Password visibility toggles with eye icon
+    const EYE_SHOW_SVG = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>';
+    const EYE_HIDE_SVG = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></svg>';
+
     document.querySelectorAll('[data-toggle-password]').forEach((btn) => {
       btn.addEventListener('click', () => {
         const targetId = btn.getAttribute('data-toggle-password');
@@ -966,7 +955,8 @@
         if (!input) return;
         const isPwd = input.type === 'password';
         input.type = isPwd ? 'text' : 'password';
-        btn.textContent = isPwd ? 'Hide' : 'Show';
+        btn.innerHTML = isPwd ? EYE_HIDE_SVG : EYE_SHOW_SVG;
+        btn.setAttribute('aria-label', isPwd ? 'Hide password' : 'Show password');
       });
     });
 
@@ -1177,13 +1167,13 @@
           .map(
             (b) => `
           <tr>
-            <td><strong>${b.id}</strong></td>
-            <td>${b.service}</td>
-            <td>${b.furnitureType} (${b.quantity})</td>
-            <td>${b.date}</td>
-            <td>${b.time}</td>
-            <td><span class="status-badge">${b.status}</span></td>
-            <td><button type="button" class="btn btn--outline btn--sm" data-view-booking="${b.id}">Inspect / Track</button></td>
+            <td data-label="Booking ID"><strong>${b.id}</strong></td>
+            <td data-label="Service Type">${b.service}</td>
+            <td data-label="Furniture">${b.furnitureType} (${b.quantity})</td>
+            <td data-label="Selected Date">${b.date}</td>
+            <td data-label="Time Slot">${b.time}</td>
+            <td data-label="Status"><span class="status-badge">${b.status}</span></td>
+            <td data-label="Action"><button type="button" class="btn btn--outline btn--sm" data-view-booking="${b.id}">Inspect / Track</button></td>
           </tr>`
           )
           .join('');
@@ -1196,11 +1186,11 @@
           .map(
             (b) => `
           <tr>
-            <td><strong>${b.id}</strong></td>
-            <td>${b.service} — ${b.furnitureType}</td>
-            <td>${b.date}</td>
-            <td><span class="status-badge">${b.status}</span></td>
-            <td><button type="button" class="btn btn--outline btn--sm" data-view-booking="${b.id}">View Details</button></td>
+            <td data-label="Booking Reference"><strong>${b.id}</strong></td>
+            <td data-label="Furniture Cleaned">${b.service} — ${b.furnitureType}</td>
+            <td data-label="Service Date">${b.date}</td>
+            <td data-label="Status"><span class="status-badge">${b.status}</span></td>
+            <td data-label="Details"><button type="button" class="btn btn--outline btn--sm" data-view-booking="${b.id}">View Details</button></td>
           </tr>`
           )
           .join('');
@@ -1314,7 +1304,7 @@
       if (!viewId) return;
       if (viewId === 'logout') {
         localStorage.removeItem(STORAGE_KEYS.SESSION);
-        window.location.href = 'login.html';
+        window.location.href = 'index.html';
         return;
       }
       navBtns.forEach((b) => {
