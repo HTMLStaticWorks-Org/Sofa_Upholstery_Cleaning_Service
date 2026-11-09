@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Fabric &amp; Stain Care Experience | VERDANT Upholstery Care (Home 2)</title>
+  <meta name="description" content="Discover a smarter approach to sofa and upholstery care. Explore interactive fabric care guides, stain treatment protocols, and our 5-stage extraction process.">
+  <meta property="og:title" content="VERDANT Upholstery Care — Interactive Fabric &amp; Upholstery Experience">
+  <meta property="og:description" content="Fresher fabrics. Better living. Explore fabric-specific care for cotton, linen, velvet, polyester, microfiber, and leather.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== GLOBAL STICKY NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Verdant Upholstery Care Home">
+        <span class="brand-logo__mark" aria-hidden="true">
+          <img src="images/logo.png" alt="Verdant Upholstery Care Logo" width="58" height="42">
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__name">VERDANT</span>
+          <span class="brand-logo__sub">UPHOLSTERY CARE</span>
+        </span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home-2.html" class="nav-link is-active">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="booking.html" class="nav-link">Booking</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle Light and Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button type="button" class="rtl-toggle-btn" data-rtl-toggle aria-label="Toggle Direction" title="Toggle RTL / LTR Direction">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 7h12m0 0l-4-4m4 4l-4 4"/>
+            <path d="M16 17H4m0 0l4 4m-4-4l4-4"/>
+          </svg>
+        </button>
+        <a href="login.html" class="btn btn--primary btn--sm btn--nav-cta">Login</a>
+        <button type="button" class="hamburger-btn" data-drawer-open aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer" aria-hidden="true">
+    <div class="mobile-drawer__header">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo__mark">
+          <img src="images/logo.png" alt="Verdant Upholstery Care Logo" width="58" height="42">
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__name">VERDANT</span>
+          <span class="brand-logo__sub">UPHOLSTERY CARE</span>
+        </span>
+      </a>
+      <button type="button" class="drawer-close-btn" data-drawer-close aria-label="Close Navigation Drawer">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__body">
+      <nav class="drawer-nav-list" aria-label="Drawer Links">
+        <a href="index.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="home-2.html" class="drawer-nav-link is-active">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Home 2</span>
+        </a>
+        <a href="about.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>About</span>
+        </a>
+        <a href="services.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <span>Services</span>
+        </a>
+        <a href="pricing.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>Pricing</span>
+        </a>
+        <a href="gallery.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Gallery</span>
+        </a>
+        <a href="booking.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Booking</span>
+        </a>
+        <a href="contact.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Contact</span>
+        </a>
+        <a href="dashboard.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+          <span>Dashboard</span>
+        </a>
+      </nav>
+    </div>
+    <div class="mobile-drawer__footer">
+      <div class="drawer-toggles-row">
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle Light and Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button type="button" class="rtl-toggle-btn" data-rtl-toggle aria-label="Toggle Direction" title="Toggle RTL / LTR Direction">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 7h12m0 0l-4-4m4 4l-4 4"/>
+            <path d="M16 17H4m0 0l4 4m-4-4l4-4"/>
+          </svg>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn--primary btn--full drawer-login-btn">Login</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==================== SECTION 01 — CENTERED BACKGROUND HERO ==================== -->
+    <section class="hero-split" aria-label="Home 2 Hero">
+      <div class="container hero-split__grid">
+        <div class="hero-split__content reveal">
+          <span class="eyebrow">Interactive Fabric Science &amp; Care</span>
+          <h1 class="display-xl">FRESHER FABRICS. BETTER LIVING.</h1>
+          <p class="lead">Discover a smarter approach to sofa and upholstery care with professional cleaning designed around your furniture.</p>
+          <div class="hero-cta-group">
+            <a href="services.html" class="btn btn--sage btn--lg">
+              <span>EXPLORE CLEANING SERVICES</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="booking.html" class="btn btn--outline-light btn--lg">BOOK A SLOT</a>
+          </div>
+
+          <div class="grid-2 hero-split__stats">
+            <div class="stat-box">
+              <div class="stat-box__num">6 Weaves</div>
+              <div class="stat-box__label">Interactive Fabric Care Profiles Below</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-box__num">Code-Checked</div>
+              <div class="stat-box__label">Tailored to W, S, W/S &amp; L Care Tags</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 02 — INTERACTIVE FABRIC EXPLORER ==================== -->
+    <section class="section" id="fabric-explorer">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <div class="section-header__text">
+            <span class="eyebrow">Fibre-Conscious Methodology</span>
+            <h2 class="heading-lg">EVERY FABRIC NEEDS THE RIGHT CARE.</h2>
+            <p class="lead">No single cleaning method is safe for every upholstery weave. Cleaning protocols always depend on manufacturer care instructions (W, S, W/S, X, L) and current fabric condition. Select a fabric below to inspect its care considerations.</p>
+          </div>
+        </div>
+
+        <!-- 6 Fabric Cards in an Even 3x2 Desktop / 2x3 Tablet Grid -->
+        <div class="grid-6">
+          <!-- Cotton (image-26.png) -->
+          <article class="service-card fabric-card is-selected reveal" data-fabric-card="cotton" style="cursor:pointer;">
+            <div class="card-media">
+              <img src="images/image-26.png" alt="Close-up of crisp off-white woven cotton sofa cushions and throw pillows" loading="lazy" width="2048" height="1306">
+              <span class="card-badge">01 • Natural Fibre</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Cotton Weaves</h3>
+              <p>Soft, breathable natural yarn that requires pH-balanced moisture control to prevent cellulosic browning or shrinkage.</p>
+            </div>
+          </article>
+
+          <!-- Linen (image-46.png) -->
+          <article class="service-card fabric-card reveal" data-fabric-card="linen" style="cursor:pointer;">
+            <div class="card-media">
+              <img src="images/image-46.png" alt="Technician with blue gloves steam-cleaning a beige linen wingback armchair in a sunlit study" loading="lazy" width="1920" height="1434">
+              <span class="card-badge">02 • Bast Fibre</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Linen &amp; Slub Blends</h3>
+              <p>Textured organic weave sensitive to water rings and high-heat agitation; treated with low-moisture mist or solvent-safe care.</p>
+            </div>
+          </article>
+
+          <!-- Velvet (image-22.png) -->
+          <article class="service-card fabric-card reveal" data-fabric-card="velvet" style="cursor:pointer;">
+            <div class="card-media">
+              <img src="images/image-22.png" alt="Female specialist in black polo shirt extracting a royal blue velvet sofa in a sunlit modern room" loading="lazy" width="1000" height="1000">
+              <span class="card-badge">03 • Cut Pile</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Velvet &amp; Chenille</h3>
+              <p>Luxurious raised pile requiring delicate directional extraction and post-clean carding to preserve plushness and sheen.</p>
+            </div>
+          </article>
+
+          <!-- Polyester (image-55.png) -->
+          <article class="service-card fabric-card reveal" data-fabric-card="polyester" style="cursor:pointer;">
+            <div class="card-media">
+              <img src="images/image-55.png" alt="High-angle view of specialist using a chrome extraction wand across a slate-grey polyester loveseat on a turquoise rug" loading="lazy" width="1200" height="800">
+              <span class="card-badge">04 • Synthetic Weave</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Polyester &amp; Olefin</h3>
+              <p>Durable water-safe synthetic fabric that responds excellently to oil-emulsifying pre-sprays and deep hot-water rinse extraction.</p>
+            </div>
+          </article>
+
+          <!-- Microfiber (image-45.png) -->
+          <article class="service-card fabric-card reveal" data-fabric-card="microfiber" style="cursor:pointer;">
+            <div class="card-media">
+              <img src="images/image-45.png" alt="Technician in dark green trousers and black gloves using a yellow-hose upholstery extractor on a tufted grey microfiber sofa" loading="lazy" width="1139" height="600">
+              <span class="card-badge">05 • Ultra-Fine Filament</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Microfiber &amp; Suede-Tex</h3>
+              <p>Tightly packed synthetic filaments that trap fine dust and oils; restored with residue-free foam and dual-pass suction.</p>
+            </div>
+          </article>
+
+          <!-- Leather (image-29.png) -->
+          <article class="service-card fabric-card reveal" data-fabric-card="leather" style="cursor:pointer;">
+            <div class="card-media">
+              <img src="images/image-29.png" alt="Specialist in black gloves spraying leather cleanser onto a white microfiber cloth to clean a brown leather sofa armrest" loading="lazy" width="900" height="600">
+              <span class="card-badge">06 • Natural Hide</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Leather Seating</h3>
+              <p>Never steam-cleaned; hand-treated with pH-neutral hide cleansers and replenished with protective conditioning balm.</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Live Dynamic Fabric Advisory Panel -->
+        <div class="explorer-panel reveal" id="fabric-explorer-panel" aria-live="polite">
+          <div class="split-layout">
+            <div>
+              <span class="eyebrow" id="fe-code">Manufacturer Care Code: W or W/S (Verify Tag)</span>
+              <h3 class="heading-md" id="fe-name" style="margin-bottom: 12px;">Natural Cotton Upholstery</h3>
+              <p id="fe-considerations" style="margin-bottom: 14px; color: var(--text-body);">Natural cotton fibres absorb liquid spills rapidly and can experience cellulosic browning or shrinkage if over-wetted with high-alkaline solutions.</p>
+              <p id="fe-care" style="color: var(--text-muted); font-size: 0.94rem;">We perform a fibre-burn and dye-stability check first, followed by pH-balanced low-moisture spray extraction and immediate high-velocity airflow grooming.</p>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:14px;justify-content:center;">
+              <div class="stat-box">
+                <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;color:var(--text-muted);">Recommended Method</div>
+                <div class="heading-sm" id="fe-temp" style="margin-top:4px;">Controlled Warm Extraction (45°C–55°C)</div>
+              </div>
+              <div class="stat-box">
+                <div style="font-size:0.76rem;font-weight:700;text-transform:uppercase;color:var(--text-muted);">Drying Guidance</div>
+                <div class="heading-sm" id="fe-drying" style="margin-top:4px;">Estimated Drying: 3 to 5 Hours</div>
+              </div>
+              <div class="hero-cta-group" style="display:flex;gap:12px;flex-wrap:wrap;">
+                <a href="booking.html?service=Sofa%20Cleaning" id="fe-book-cta" class="btn btn--primary">Book Care for This Fabric</a>
+                <button type="button" class="btn btn--outline" data-open-enquiry="Fabric & Product Advice">Enquire About Fabric Tag</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 03 — THE STAIN CHALLENGE (4 ITEMS) ==================== -->
+    <section class="section section--surface" id="stain-challenge">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div class="section-header__text">
+            <span class="eyebrow">Targeted Spot Chemistry</span>
+            <h2 class="heading-lg">FROM EVERYDAY SPILLS TO STUBBORN STAINS.</h2>
+            <p class="lead">Click any of the four common stain scenarios below to inspect general first-response guidance and how our technicians approach treatment.</p>
+          </div>
+          <span class="badge-demo">Interactive Stain Guide</span>
+        </div>
+
+        <!-- Strict 4-Item Even Grid -->
+        <div class="grid-4">
+          <!-- Stain 01: Coffee Stains (image-35.png) -->
+          <article class="service-card stain-card is-selected reveal" data-stain-key="coffee" style="cursor:pointer;">
+            <div class="card-media card-media--square">
+              <img src="images/image-35.png" alt="Close-up of a hand spraying white upholstery stain remover spray onto a brown coffee spill on a grey sofa cushion" loading="lazy" width="1600" height="1600">
+              <span class="card-badge">01 • Tannin Spills</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Coffee Stains</h3>
+              <p>Dark roasted tannins and milk sugars that bond to light-coloured sofa cushions if rubbed or heated prematurely.</p>
+              <span class="card-link">Inspect Guidance &rarr;</span>
+            </div>
+          </article>
+
+          <!-- Stain 02: Food Stains (image-28.png) -->
+          <article class="service-card stain-card reveal" data-stain-key="food" style="cursor:pointer;">
+            <div class="card-media card-media--square">
+              <img src="images/image-28.png" alt="Blue-gloved hand operating an extraction nozzle pulling foamy brown food and beverage stain residue from a light beige sofa cushion" loading="lazy" width="1536" height="1024">
+              <span class="card-badge">02 • Organic &amp; Oil</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Food Stains</h3>
+              <p>Cooking oils, sauces, and dining spills that require multi-stage enzymatic breakdown before hot-water rinsing.</p>
+              <span class="card-link">Inspect Guidance &rarr;</span>
+            </div>
+          </article>
+
+          <!-- Stain 03: Dust & Dirt (image-57.png) -->
+          <article class="service-card stain-card reveal" data-stain-key="dust" style="cursor:pointer;">
+            <div class="card-media card-media--square">
+              <img src="images/image-57.png" alt="Close-up of hands holding a grey brush vacuum nozzle removing crumbs and dry dust from the seam crease of a grey sofa" loading="lazy" width="771" height="503">
+              <span class="card-badge">03 • Particulate Soil</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Dust and Dirt</h3>
+              <p>Abrasive household dust, crumbs, and outdoor grit trapped deep inside cushion piping and backrest crevices.</p>
+              <span class="card-link">Inspect Guidance &rarr;</span>
+            </div>
+          </article>
+
+          <!-- Stain 04: Pet-Related Marks (image-17.png) -->
+          <article class="service-card stain-card reveal" data-stain-key="pet" style="cursor:pointer;">
+            <div class="card-media card-media--square">
+              <img src="images/image-17.png" alt="Technician in dark navy uniform steam-cleaning a heavily stained grey L-shaped sectional sofa in a stone-walled living room, leaving a clean stripe" loading="lazy" width="1024" height="1024">
+              <span class="card-badge">04 • Pet &amp; Traffic</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Pet-Related Marks</h3>
+              <p>Muddy paw tracks, body oils, dander, and biological spots requiring odour neutralization and deep extraction.</p>
+              <span class="card-link">Inspect Guidance &rarr;</span>
+            </div>
+          </article>
+        </div>
+
+        <!-- Dynamic Stain Guidance Panel -->
+        <div class="explorer-panel reveal" id="stain-detail-panel" aria-live="polite">
+          <div class="split-layout">
+            <div>
+              <span class="eyebrow" id="stain-panel-badge">Tannin &amp; Caramelized Sugar Protocol</span>
+              <h3 class="heading-md" id="stain-panel-title" style="margin-bottom: 12px;">Coffee, Tea &amp; Tannin Spills</h3>
+              <p style="font-weight: 600; color: var(--text-heading); margin-bottom: 6px;">First-Response Home Guidance:</p>
+              <p id="stain-panel-guidance" style="margin-bottom: 14px; color: var(--text-muted);">Hot beverages penetrate both the outer weave and inner cushion ticking. Rubbing spreads tannins wider; blot gently with a white cloth and avoid household bleach.</p>
+            </div>
+            <div>
+              <p style="font-weight: 600; color: var(--text-heading); margin-bottom: 6px;">Professional Verdant Treatment Approach:</p>
+              <p id="stain-panel-method" style="margin-bottom: 20px; color: var(--text-muted);">We apply a slightly acidic tannin-reducing spotter, allow a 10-minute dwell to unbind the pigment, and extract vertically using a transparent upholstery nozzle.</p>
+              <div class="hero-cta-group" style="display:flex;gap:12px;flex-wrap:wrap;">
+                <a href="booking.html?service=Fabric%20Stain%20Treatment" id="stain-panel-cta" class="btn btn--primary">Book Coffee Stain Treatment</a>
+                <button type="button" class="btn btn--outline" data-open-enquiry="Service Information">Ask About a Stubborn Stain</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 04 — OUR CLEANING PROCESS (5 STAGES) ==================== -->
+    <section class="section" id="cleaning-process">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">Step-by-Step Transparency</span>
+          <h2 class="heading-lg">INSIDE OUR UPHOLSTERY CARE PROCESS.</h2>
+          <p class="lead">Select each stage of our 5-step process below to explore how we inspect, pre-treat, agitate, extract, and groom your furniture.</p>
+        </div>
+
+        <div class="interactive-tabs" style="justify-content:center;" role="tablist" aria-label="Cleaning Process Stages">
+          <button type="button" class="tab-pill is-active" data-process-step="1">01 — INSPECTION</button>
+          <button type="button" class="tab-pill" data-process-step="2">02 — FABRIC ASSESSMENT</button>
+          <button type="button" class="tab-pill" data-process-step="3">03 — PRE-TREATMENT</button>
+          <button type="button" class="tab-pill" data-process-step="4">04 — DEEP CLEANING</button>
+          <button type="button" class="tab-pill" data-process-step="5">05 — FINAL CHECK</button>
+        </div>
+
+        <div class="explorer-panel reveal">
+          <div class="split-layout">
+            <div>
+              <span class="eyebrow" id="proc-stage-num">STAGE 01 OF 05</span>
+              <h3 class="heading-md" id="proc-stage-title" style="margin-bottom: 14px;">Detailed Fibre &amp; Frame Inspection</h3>
+              <p id="proc-stage-desc" style="color: var(--text-muted); margin-bottom: 20px;">Every appointment begins with a seam-by-seam walkthrough. We inspect manufacturer care tags (W, S, W/S, X), test inconspicuous areas for colourfastness, and map existing wear, sun fading, and stains.</p>
+              <ul class="pricing-list" id="proc-stage-list" style="margin-block: 0 24px;">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Identification of natural vs. synthetic yarn blends</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Colourfastness and shrinkage risk verification</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg><span>Pre-cleaning documentation of high-traffic areas</span></li>
+              </ul>
+              <a href="booking.html" class="btn btn--primary" style="margin-bottom: 24px;">Schedule Your Inspection &amp; Clean</a>
+            </div>
+
+            <!-- 2 Process Visual Cards (image-38.png & image-42.png) -->
+            <div class="grid-2" style="gap: 16px;">
+              <div class="service-card">
+                <div class="card-media card-media--square">
+                  <img src="images/image-38.png" alt="Close-up of black-gloved hands gently agitating a dark brown woven sofa cushion with a soft-bristle upholstery brush" loading="lazy" width="1672" height="941">
+                </div>
+                <div class="card-body" style="padding: 16px;">
+                  <h4 class="heading-sm" style="font-size: 0.96rem;">Soft-Bristle Fibre Agitation</h4>
+                  <p style="font-size: 0.84rem;">Loosening surface soil along textured brown weave fibres without abrading yarns.</p>
+                </div>
+              </div>
+
+              <div class="service-card">
+                <div class="card-media card-media--square">
+                  <img src="images/image-42.png" alt="Close-up of white-gloved hands guiding a yellow orbital upholstery polisher with thick white cleaning foam over a grey sofa cushion" loading="lazy" width="800" height="450">
+                </div>
+                <div class="card-body" style="padding: 16px;">
+                  <h4 class="heading-sm" style="font-size: 0.96rem;">Controlled Orbital Foam Care</h4>
+                  <p style="font-size: 0.84rem;">Encapsulating low-moisture foam treatment suspending deep cushion oils prior to extraction.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 05 — SERVICE DISCOVERY ==================== -->
+    <section class="section section--surface" id="service-discovery">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div class="section-header__text">
+            <span class="eyebrow">Interactive Service Matcher</span>
+            <h2 class="heading-lg">WHAT NEEDS A FRESH START?</h2>
+            <p class="lead">Choose a furniture category below to view tailored appointment durations, sample starting rates, and direct booking links.</p>
+          </div>
+          <div class="interactive-tabs" role="tablist" aria-label="Furniture Categories">
+            <button type="button" class="tab-pill is-active" data-discovery-key="sofas">Sofas</button>
+            <button type="button" class="tab-pill" data-discovery-key="dining">Dining Chairs</button>
+            <button type="button" class="tab-pill" data-discovery-key="office">Office Chairs</button>
+            <button type="button" class="tab-pill" data-discovery-key="curtains">Curtains</button>
+            <button type="button" class="tab-pill" data-discovery-key="mattresses">Mattresses</button>
+            <button type="button" class="tab-pill" data-discovery-key="upholstery">Upholstered Furniture</button>
+          </div>
+        </div>
+
+        <div class="explorer-panel reveal" style="margin-top: 0;">
+          <div class="split-layout">
+            <div style="border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle);">
+              <img src="images/image-60.png" alt="Symmetrical wide view of a modern grey two-seater sofa in front of bright sheer curtains as a technician steams a clean bright zone onto the left cushion" loading="lazy" width="1152" height="896">
+            </div>
+            <div>
+              <span class="eyebrow" id="disc-duration">Typical Appointment: 60–120 Minutes</span>
+              <h3 class="heading-md" id="disc-title" style="margin-bottom: 10px;">2-Seater, 3-Seater &amp; Sectional Sofas</h3>
+              <div class="pricing-card__price" id="disc-price" style="font-size: 1.5rem; margin-block: 10px 16px;">Sample Starting Price: $89 – $169</div>
+              <p id="disc-desc" style="color: var(--text-muted); margin-bottom: 24px;">Complete cushion, backrest, armrest, and frame upholstery cleaning tailored to linen, cotton, velvet, microfiber, or leather sofas.</p>
+              <div class="hero-cta-group" style="display:flex;gap:12px;flex-wrap:wrap;">
+                <a href="booking.html?service=Sofa%20Cleaning" id="disc-cta" class="btn btn--primary">Book This Service</a>
+                <a href="services.html" class="btn btn--outline">Full Service Specifications</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 06 — CLEANING CARE PRODUCTS (4 ITEMS) ==================== -->
+    <section class="section" id="care-products">
+      <div class="container">
+        <div class="section-header section-header--split reveal">
+          <div class="section-header__text">
+            <span class="eyebrow">Professional Formulations &amp; Tools</span>
+            <h2 class="heading-lg">THE DETAILS BEHIND BETTER FABRIC CARE.</h2>
+            <p class="lead">Explore four sample upholstery-care solutions and extraction tools used in our fabric-safe cleaning workflows.</p>
+          </div>
+          <a href="services.html" class="btn btn--outline">EXPLORE SERVICES</a>
+        </div>
+
+        <!-- Strict 4-Item Even Grid -->
+        <div class="grid-4">
+          <!-- Product 01 (image-25.png) -->
+          <article class="product-card reveal" data-tilt>
+            <div class="card-media card-media--square">
+              <img src="images/image-25.png" alt="Black-gloved hands dispensing thick white upholstery cleaning foam onto a wooden soft-bristle brush over a taupe velvet French settee" loading="lazy" width="2120" height="1414">
+              <span class="card-badge">Sample Care Item</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Upholstery Cleaning Solution</h3>
+              <p>Low-moisture encapsulating micro-foam designed to suspend surface oils on delicate velvet and natural-fibre weaves.</p>
+              <div class="card-footer">
+                <a href="services.html" class="card-link">Explore Care Protocol &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 02 (image-18.png) -->
+          <article class="product-card reveal" data-tilt>
+            <div class="card-media card-media--square">
+              <img src="images/image-18.png" alt="Close-up of a pink-gloved hand guiding a white spray-extraction upholstery nozzle across textured grey tweed fabric" loading="lazy" width="2048" height="1366">
+              <span class="card-badge">Sample Care Item</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Fabric Protection Treatment</h3>
+              <p>Post-cleaning breathable fibre shield that gives homeowners extra time to blot accidental beverage drips on textured weaves.</p>
+              <div class="card-footer">
+                <a href="services.html" class="card-link">Explore Care Protocol &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 03 (image-51.png) -->
+          <article class="product-card reveal" data-tilt>
+            <div class="card-media card-media--square">
+              <img src="images/image-51.png" alt="Close-up of a yellow-gloved hand pulling a stainless steel extraction nozzle through rich white cleaning foam on a denim-blue armchair cushion" loading="lazy" width="1290" height="860">
+              <span class="card-badge">Sample Care Item</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Spot Cleaning Solution</h3>
+              <p>Targeted foaming spot release solution formulated to help lift localized food and beverage marks during extraction.</p>
+              <div class="card-footer">
+                <a href="services.html" class="card-link">Explore Care Protocol &rarr;</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Product 04 (image-27.png) -->
+          <article class="product-card reveal" data-tilt>
+            <div class="card-media card-media--square">
+              <img src="images/image-27.png" alt="Studio photograph of a grey and yellow Kärcher Professional Puzzi 10/1 spray-extraction machine with hose and clear upholstery hand nozzle" loading="lazy" width="1200" height="1200">
+              <span class="card-badge">Equipment Spec</span>
+            </div>
+            <div class="card-body">
+              <h3 class="heading-sm">Fabric Care Kit &amp; Extractor</h3>
+              <p>Commercial spray-extraction hardware pairing calibrated rinse pressure with immediate high-lift moisture recovery.</p>
+              <div class="card-footer">
+                <a href="services.html" class="card-link">Explore Care Protocol &rarr;</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 07 — BOOKING EXPERIENCE PREVIEW ==================== -->
+    <section class="section section--surface" id="booking-preview">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="eyebrow">Interactive Appointment Planner</span>
+          <h2 class="heading-lg">YOUR NEXT CLEANING APPOINTMENT, MADE SIMPLE.</h2>
+          <p class="lead">Configure your preferred service, furniture quantity, date, and sample time window below—your selections carry straight into our full booking portal.</p>
+        </div>
+
+        <div class="form-card reveal" style="max-width: 960px; margin-inline: auto;">
+          <form id="home2-booking-preview-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label class="form-label" for="preview-service">1. Select Cleaning Service</label>
+                <select class="form-control" id="preview-service">
+                  <option value="Sofa Cleaning">Sofa Cleaning</option>
+                  <option value="Chair Cleaning">Chair Cleaning</option>
+                  <option value="Curtain Cleaning">Curtain Cleaning</option>
+                  <option value="Mattress Cleaning">Mattress Cleaning</option>
+                  <option value="Upholstery Deep Cleaning">Upholstery Deep Cleaning</option>
+                  <option value="Fabric Stain Treatment">Fabric Stain Treatment</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="preview-qty">2. Select Furniture Quantity</label>
+                <select class="form-control" id="preview-qty">
+                  <option value="1">1 Piece / Single Set</option>
+                  <option value="2">2 Pieces</option>
+                  <option value="4">4 Pieces (e.g., Dining Set)</option>
+                  <option value="6">6 Pieces (Full Room Package)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="preview-date">3. Choose Preferred Date</label>
+                <input type="date" class="form-control" id="preview-date" value="2026-11-20">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">4. Select Available Demo Time Slot</label>
+                <input type="hidden" id="preview-selected-slot" value="10:00 AM – 12:00 PM (Morning)">
+                <div class="slot-grid">
+                  <button type="button" class="slot-btn is-selected" data-slot="10:00 AM – 12:00 PM (Morning)">Morning (10–12)</button>
+                  <button type="button" class="slot-btn" data-slot="02:00 PM – 04:00 PM (Afternoon)">Afternoon (2–4)</button>
+                  <button type="button" class="slot-btn" data-slot="05:00 PM – 07:00 PM (Evening)">Evening (5–7)</button>
+                </div>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:28px;padding-top:20px;border-top:1px solid var(--border-subtle);flex-wrap:wrap;">
+              <span class="badge-demo">Note: Displayed time windows represent illustrative demo availability</span>
+              <button type="submit" class="btn btn--primary btn--lg">
+                <span>5. START BOOKING</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SECTION 08 — PREMIUM FINAL CTA ==================== -->
+    <section class="section section--dark" id="home2-final-cta">
+      <div class="container split-layout">
+        <div class="reveal">
+          <div style="border-radius: var(--radius-xl); overflow: hidden; border: 2px solid rgba(46,204,143,0.35); box-shadow: var(--shadow-lg);">
+            <img src="images/image-32.png" alt="Male upholstery technician kneeling in a sunlit modern living room using a Kärcher extractor wand to pull a clean bright stripe across a soiled cream chaise sofa" loading="lazy" width="1024" height="597">
+          </div>
+        </div>
+        <div class="reveal">
+          <span class="eyebrow">Experience the Difference</span>
+          <h2 class="display-lg" style="margin-bottom: 18px;">READY TO LOVE YOUR SOFA AGAIN?</h2>
+          <p class="lead" style="color: rgba(255,255,255,0.88); margin-bottom: 28px;">Whether your living room sofa needs a seasonal refresh or targeted stain recovery, our fabric-conscious process brings comfort back to every seat.</p>
+          <div class="hero-cta-group" style="margin-bottom: 0;">
+            <a href="booking.html" class="btn btn--sage btn--lg">
+              <span>BOOK YOUR CLEANING</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+            <a href="pricing.html" class="btn btn--outline-light btn--lg">COMPARE PACKAGES</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 16px;">
+            <span class="brand-logo__mark">
+              <img src="images/logo.png" alt="Verdant Upholstery Care Logo" width="58" height="42">
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name" style="color: var(--clr-white);">VERDANT</span>
+              <span class="brand-logo__sub" style="color: var(--clr-sage);">UPHOLSTERY CARE</span>
+            </span>
+          </a>
+          <p style="font-size: 0.9rem; margin-bottom: 16px;">Professional sofa, furniture, and upholstery cleaning that removes everyday dirt, tackles stubborn stains, and refreshes the furniture you love.</p>
+                    <div class="footer-social-links" aria-label="Follow Verdant Upholstery Care">
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com" class="footer-social-icon" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+            </a>
+            <a href="https://linkedin.com" class="footer-social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-icon" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>OUR SERVICES</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#sofa-cleaning">Sofa Cleaning</a></li>
+            <li><a href="services.html#chair-cleaning">Chair Cleaning</a></li>
+            <li><a href="services.html#curtain-mattress">Curtain Cleaning</a></li>
+            <li><a href="services.html#curtain-mattress">Mattress Cleaning</a></li>
+            <li><a href="services.html#specialized-care">Stain Treatment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CUSTOMER</h4>
+          <ul class="footer-links">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book a Cleaning</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Customer Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CONTACT &amp; NEWSLETTER</h4>
+          <ul class="footer-links" style="margin-bottom: 14px;">
+            <li>Phone: +1 (555) 482-9100 (Demo)</li>
+            <li>Email: care@verdantupholstery.example</li>
+            <li>Area: Greater Metro &amp; Surrounding Suburbs</li>
+          </ul>
+          <form class="newsletter-form" aria-label="Newsletter Subscription">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address">
+            <button type="submit" class="btn btn--sage btn--sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VERDANT UPHOLSTERY CARE. All rights reserved. Illustrative frontend demonstration experience.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="pricing.html">Transparent Pricing</a>
+          <a href="booking.html">Book Online</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

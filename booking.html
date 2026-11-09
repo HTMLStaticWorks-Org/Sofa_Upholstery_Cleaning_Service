@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Sofa &amp; Upholstery Cleaning Appointment | VERDANT Upholstery Care</title>
+  <meta name="description" content="Schedule your professional sofa, chair, curtain, or mattress cleaning online. Choose your service, furniture details, date, and demo time slot.">
+  <meta property="og:title" content="VERDANT Upholstery Care — Book a Cleaning">
+  <meta property="og:description" content="Your fresher home starts with a booking. Interactive service and date configurator.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ==================== GLOBAL STICKY NAVBAR ==================== -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" aria-label="Verdant Upholstery Care Home">
+        <span class="brand-logo__mark" aria-hidden="true">
+          <img src="images/logo.png" alt="Verdant Upholstery Care Logo" width="58" height="42">
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__name">VERDANT</span>
+          <span class="brand-logo__sub">UPHOLSTERY CARE</span>
+        </span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home-2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="pricing.html" class="nav-link">Pricing</a>
+        <a href="gallery.html" class="nav-link">Gallery</a>
+        <a href="booking.html" class="nav-link is-active">Booking</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle Light and Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button type="button" class="rtl-toggle-btn" data-rtl-toggle aria-label="Toggle Direction" title="Toggle RTL / LTR Direction">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 7h12m0 0l-4-4m4 4l-4 4"/>
+            <path d="M16 17H4m0 0l4 4m-4-4l4-4"/>
+          </svg>
+        </button>
+        <a href="login.html" class="btn btn--primary btn--sm btn--nav-cta">Login</a>
+        <button type="button" class="hamburger-btn" data-drawer-open aria-label="Open Navigation Menu">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+    <!-- ==================== MOBILE NAVIGATION DRAWER ==================== -->
+  <div class="mobile-drawer-backdrop" aria-hidden="true"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation Drawer" aria-hidden="true">
+    <div class="mobile-drawer__header">
+      <a href="index.html" class="brand-logo">
+        <span class="brand-logo__mark">
+          <img src="images/logo.png" alt="Verdant Upholstery Care Logo" width="58" height="42">
+        </span>
+        <span class="brand-logo__text">
+          <span class="brand-logo__name">VERDANT</span>
+          <span class="brand-logo__sub">UPHOLSTERY CARE</span>
+        </span>
+      </a>
+      <button type="button" class="drawer-close-btn" data-drawer-close aria-label="Close Navigation Drawer">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="mobile-drawer__body">
+      <nav class="drawer-nav-list" aria-label="Drawer Links">
+        <a href="index.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Home</span>
+        </a>
+        <a href="home-2.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Home 2</span>
+        </a>
+        <a href="about.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <span>About</span>
+        </a>
+        <a href="services.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <span>Services</span>
+        </a>
+        <a href="pricing.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          <span>Pricing</span>
+        </a>
+        <a href="gallery.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+          <span>Gallery</span>
+        </a>
+        <a href="booking.html" class="drawer-nav-link is-active">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span>Booking</span>
+        </a>
+        <a href="contact.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Contact</span>
+        </a>
+        <a href="dashboard.html" class="drawer-nav-link">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="16" width="7" height="5"/></svg>
+          <span>Dashboard</span>
+        </a>
+      </nav>
+    </div>
+    <div class="mobile-drawer__footer">
+      <div class="drawer-toggles-row">
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle Light and Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button type="button" class="rtl-toggle-btn" data-rtl-toggle aria-label="Toggle Direction" title="Toggle RTL / LTR Direction">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 7h12m0 0l-4-4m4 4l-4 4"/>
+            <path d="M16 17H4m0 0l4 4m-4-4l4-4"/>
+          </svg>
+        </button>
+      </div>
+      <a href="login.html" class="btn btn--primary btn--full drawer-login-btn">Login</a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- ==================== SECTION 01 — BOOKING HERO ==================== -->
+    <section class="page-hero" id="booking-hero" style="background-image: url('images/image-24.png');">
+      <div class="container page-hero__inner reveal">
+        <div class="breadcrumb">
+          <a href="index.html">Home</a>
+          <span>/</span>
+          <span>Book a Cleaning</span>
+        </div>
+        <span class="eyebrow">Interactive Appointment Scheduler</span>
+        <h1 class="display-lg">YOUR FRESHER HOME STARTS WITH A BOOKING.</h1>
+        <p class="lead">
+          Complete the steps below to configure your upholstery service, furniture specifications, and preferred demo date and time slot. Your request automatically syncs with your Customer Dashboard.
+        </p>
+      </div>
+    </section>
+
+    <form id="full-booking-form" novalidate>
+      <!-- ==================== SECTION 02 — SERVICE SELECTION (6 CARDS) ==================== -->
+      <section class="section" id="service-selection">
+        <div class="container">
+          <div class="section-header section-header--split reveal">
+            <div>
+              <span class="eyebrow">Step 01 of 04 • Choose Service Category</span>
+              <h2 class="heading-lg">SELECT YOUR CLEANING SERVICE.</h2>
+            </div>
+            <p class="lead">Click any of the six core upholstery services below to select your primary care protocol and update your live estimate.</p>
+          </div>
+
+          <!-- Strict 6-Card Even Grid -->
+          <div class="grid-6 reveal">
+            <div class="feature-card is-selected" data-select-service="Sofa Cleaning" style="cursor: pointer;" role="button" tabindex="0">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span class="badge-demo">Service 01</span>
+                <span style="font-weight: 800; color: var(--clr-primary);">$95 Base</span>
+              </div>
+              <h3 class="heading-sm" style="margin-bottom: 8px;">Sofa Cleaning</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Deep hot-water or low-moisture extraction for 2-seaters, 3-seaters, loveseats, and sectionals.</p>
+            </div>
+
+            <div class="feature-card" data-select-service="Chair Cleaning" style="cursor: pointer;" role="button" tabindex="0">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span class="badge-demo">Service 02</span>
+                <span style="font-weight: 800; color: var(--clr-primary);">$65 Base</span>
+              </div>
+              <h3 class="heading-sm" style="margin-bottom: 8px;">Chair Cleaning</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Precision hand-wand extraction for upholstered dining chairs, armchairs, and office seating.</p>
+            </div>
+
+            <div class="feature-card" data-select-service="Curtain Cleaning" style="cursor: pointer;" role="button" tabindex="0">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span class="badge-demo">Service 03</span>
+                <span style="font-weight: 800; color: var(--clr-primary);">$85 Base</span>
+              </div>
+              <h3 class="heading-sm" style="margin-bottom: 8px;">Curtain Cleaning</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">On-rod vertical dust vacuuming and controlled steam sanitization for full-height drapery.</p>
+            </div>
+
+            <div class="feature-card" data-select-service="Mattress Cleaning" style="cursor: pointer;" role="button" tabindex="0">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span class="badge-demo">Service 04</span>
+                <span style="font-weight: 800; color: var(--clr-primary);">$80 Base</span>
+              </div>
+              <h3 class="heading-sm" style="margin-bottom: 8px;">Mattress Cleaning</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Hygienic HEPA extraction, enzymatic spot care, and steam refresh for bedroom mattresses.</p>
+            </div>
+
+            <div class="feature-card" data-select-service="Upholstery Deep Cleaning" style="cursor: pointer;" role="button" tabindex="0">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span class="badge-demo">Service 05</span>
+                <span style="font-weight: 800; color: var(--clr-primary);">$115 Base</span>
+              </div>
+              <h3 class="heading-sm" style="margin-bottom: 8px;">Upholstery Deep Cleaning</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Comprehensive multi-piece lounge restoration including cushions, ottomans, and headboards.</p>
+            </div>
+
+            <div class="feature-card" data-select-service="Fabric Stain Treatment" style="cursor: pointer;" role="button" tabindex="0">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                <span class="badge-demo">Service 06</span>
+                <span style="font-weight: 800; color: var(--clr-primary);">$70 Base</span>
+              </div>
+              <h3 class="heading-sm" style="margin-bottom: 8px;">Fabric Stain Treatment</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted);">Targeted tannin, coffee, red wine, food oil, and water-ring spot recovery protocol.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 03 — FURNITURE DETAILS ==================== -->
+      <section class="section section--surface" id="furniture-details">
+        <div class="container">
+          <div class="section-header section-header--split reveal">
+            <div>
+              <span class="eyebrow">Step 02 of 04 • Furniture &amp; Weave Profile</span>
+              <h2 class="heading-lg">ENTER YOUR FURNITURE DETAILS.</h2>
+            </div>
+            <p class="lead">Specify your furniture configuration and fabric type so our technicians bring the exact nozzles and pH-matched solutions.</p>
+          </div>
+
+          <div class="booking-step-box reveal">
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label class="form-label" for="bk-service">Selected Service Category *</label>
+                <select id="bk-service" class="form-select" required>
+                  <option value="Sofa Cleaning">Sofa Cleaning ($95 base)</option>
+                  <option value="Chair Cleaning">Chair Cleaning ($65 base)</option>
+                  <option value="Curtain Cleaning">Curtain Cleaning ($85 base)</option>
+                  <option value="Mattress Cleaning">Mattress Cleaning ($80 base)</option>
+                  <option value="Upholstery Deep Cleaning">Upholstery Deep Cleaning ($115 base)</option>
+                  <option value="Fabric Stain Treatment">Fabric Stain Treatment ($70 base)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bk-furniture-type">Furniture Type / Description *</label>
+                <input type="text" id="bk-furniture-type" class="form-input" value="3-Seater Living Room Sofa" placeholder="e.g., L-Shaped Sectional, 6 Dining Chairs" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bk-quantity">Quantity (Items / Sets) *</label>
+                <input type="number" id="bk-quantity" class="form-input" min="1" max="20" value="1" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2" style="margin-top: 20px;">
+              <div class="form-group">
+                <label class="form-label" for="bk-size">Approximate Furniture Size</label>
+                <select id="bk-size" class="form-select">
+                  <option value="Compact / 2-Seater">Compact / 2-Seater (Up to 160 cm)</option>
+                  <option value="Standard / 3-Seater" selected>Standard / 3-Seater (170 – 230 cm)</option>
+                  <option value="Large / 4-Seater or L-Sectional">Large / 4-Seater or L-Sectional (240+ cm)</option>
+                  <option value="Multi-Piece Suite / Full Set">Multi-Piece Suite / Full Set</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bk-fabric">Upholstery Fabric Type</label>
+                <select id="bk-fabric" class="form-select">
+                  <option value="Natural Linen & Cotton Blends">Natural Linen &amp; Cotton Blends (Code W/S)</option>
+                  <option value="Cotton, Silk & Performance Velvet">Cotton, Silk &amp; Performance Velvet (Pile-Sensitive)</option>
+                  <option value="Woven Polyester & Synthetic Blends" selected>Woven Polyester &amp; Synthetic Blends (Code W)</option>
+                  <option value="Ultra-Dense Microfiber & Alcantara">Ultra-Dense Microfiber &amp; Alcantara</option>
+                  <option value="Aniline, Semi-Aniline & Pigmented Leather">Aniline, Semi-Aniline &amp; Pigmented Leather (Code L)</option>
+                  <option value="Unsure — Inspect Care Tag On-Site">Unsure — Inspect Care Tag On-Site</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group" style="margin-top: 20px; margin-bottom: 0;">
+              <label class="form-label" for="bk-notes">Special Cleaning Requirements / Stain Notes</label>
+              <textarea id="bk-notes" class="form-textarea" rows="3" placeholder="Describe any specific coffee spills, water rings, pet hair, or delicate cushions you want our technician to prioritize..."></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 04 — DATE AND TIME SELECTION ==================== -->
+      <section class="section" id="date-time-selection">
+        <div class="container">
+          <div class="section-header section-header--split reveal">
+            <div>
+              <span class="eyebrow">Step 03 of 04 • Preferred Schedule</span>
+              <h2 class="heading-lg">SELECT YOUR DATE &amp; DEMO TIME SLOT.</h2>
+            </div>
+            <div>
+              <span class="badge-demo">Illustrative Demo Availability Slots</span>
+            </div>
+          </div>
+
+          <div class="booking-step-box reveal">
+            <div class="form-grid-2">
+              <div class="form-group">
+                <label class="form-label" for="bk-date">Preferred Service Date *</label>
+                <input type="date" id="bk-date" class="form-input" required>
+                <span class="form-hint">Select your preferred appointment date from the calendar.</span>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bk-time">Selected Time Window (Demo Slot)</label>
+                <input type="text" id="bk-time" class="form-input" value="10:00 AM – 12:00 PM (Morning)" readonly>
+                <span class="form-hint">Click one of the three availability windows below to update your slot.</span>
+              </div>
+            </div>
+
+            <div style="margin-top: 18px;">
+              <span class="form-label" style="display: block; margin-bottom: 10px;">Choose Available Time Window (Morning / Afternoon / Evening):</span>
+              <div class="slot-grid">
+                <button type="button" class="slot-btn is-selected" data-bk-slot="10:00 AM – 12:00 PM (Morning)">
+                  <strong>Morning Slot (Demo)</strong>
+                  <span>10:00 AM – 12:00 PM • Optimal Natural Drying</span>
+                </button>
+                <button type="button" class="slot-btn" data-bk-slot="01:30 PM – 03:30 PM (Afternoon)">
+                  <strong>Afternoon Slot (Demo)</strong>
+                  <span>01:30 PM – 03:30 PM • Standard Residential Visit</span>
+                </button>
+                <button type="button" class="slot-btn" data-bk-slot="05:00 PM – 07:00 PM (Evening)">
+                  <strong>Evening Slot (Demo)</strong>
+                  <span>05:00 PM – 07:00 PM • After-Work &amp; Office Care</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 05 — CUSTOMER INFORMATION ==================== -->
+      <section class="section section--surface" id="customer-information">
+        <div class="container">
+          <div class="section-header section-header--split reveal">
+            <div>
+              <span class="eyebrow">Step 04 of 04 • Contact &amp; Address</span>
+              <h2 class="heading-lg">CUSTOMER CONTACT INFORMATION.</h2>
+            </div>
+            <p class="lead">If you are signed in to the demo portal, your profile details are pre-filled automatically.</p>
+          </div>
+
+          <div class="booking-step-box reveal">
+            <div class="form-grid-3">
+              <div class="form-group">
+                <label class="form-label" for="bk-name">Full Name *</label>
+                <input type="text" id="bk-name" class="form-input" placeholder="e.g., Eleanor Vance" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bk-email">Email Address *</label>
+                <input type="email" id="bk-email" class="form-input" placeholder="e.g., eleanor.vance@example.com" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bk-phone">Phone Number *</label>
+                <input type="tel" id="bk-phone" class="form-input" placeholder="e.g., +1 (555) 234-8890" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2" style="margin-top: 20px;">
+              <div class="form-group">
+                <label class="form-label" for="bk-address">Street Address &amp; Apartment / Suite *</label>
+                <input type="text" id="bk-address" class="form-input" placeholder="e.g., 742 Evergreen Terrace, Suite 4B" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="bk-city">City / Neighbourhood</label>
+                <input type="text" id="bk-city" class="form-input" value="Greenfield Metro" placeholder="e.g., Greenfield Metro">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== SECTION 06 — BOOKING CONFIRMATION & LIVE SUMMARY ==================== -->
+      <section class="section" id="booking-confirmation">
+        <div class="container">
+          <div class="booking-layout reveal">
+            <div>
+              <span class="eyebrow">Review &amp; Submit Request</span>
+              <h2 class="heading-lg" style="margin-bottom: 14px;">PREPARE YOUR BOOKING REQUEST.</h2>
+              <p class="lead" style="margin-bottom: 24px;">
+                Review your live appointment summary on the right. When you click <strong>Prepare Booking Request</strong>, your booking is saved to your browser's Customer Dashboard with a unique tracking reference.
+              </p>
+
+              <div id="booking-form-error" class="form-error-msg" style="padding: 14px 18px; border-radius: var(--radius-md); background: rgba(194, 59, 42, 0.1); border: 1px solid rgba(194, 59, 42, 0.35); margin-bottom: 20px;"></div>
+
+              <div class="hero-cta-group" style="display: flex; flex-wrap: wrap; gap: 16px; align-items: center;">
+                <button type="submit" class="btn btn--primary btn--lg">
+                  <span>PREPARE BOOKING REQUEST</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+                </button>
+                <a href="pricing.html" class="btn btn--outline btn--lg">Review Package Pricing</a>
+              </div>
+
+              <!-- Confirmation Box (Hidden until submitted) -->
+              <div id="booking-confirmation-result" style="display: none; margin-top: 32px; padding: 30px; border-radius: var(--radius-lg); background: var(--clr-primary-deeper); color: var(--clr-white); border: 2px solid var(--clr-sage); box-shadow: var(--shadow-lg);">
+                <span class="badge-demo" style="background: rgba(46,204,143,0.2); color: var(--clr-sage); border-color: rgba(46,204,143,0.4); margin-bottom: 12px;">
+                  Booking Reference: <strong id="confirmed-ref-id">VRD-2026-1000</strong>
+                </span>
+                <h3 class="heading-md" style="color: var(--clr-white); margin-bottom: 10px;">
+                  YOUR BOOKING REQUEST HAS BEEN PREPARED SUCCESSFULLY.
+                </h3>
+                <p style="color: rgba(255,255,255,0.86); margin-bottom: 22px;">
+                  Your appointment has been added to your personalized Customer Dashboard. You can now inspect your 5-stage service tracker, review your booking details, or simulate status updates.
+                </p>
+                <div class="hero-cta-group" style="display: flex; flex-wrap: wrap; gap: 12px;">
+                  <a href="dashboard.html" class="btn btn--sage">
+                    <span>Open Customer Dashboard &amp; Track Service</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                  </a>
+                  <a href="services.html" class="btn btn--outline-light">Explore More Services</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Live Summary Panel -->
+            <aside class="booking-summary-card" aria-label="Live Booking Summary">
+              <span class="eyebrow" style="color: var(--clr-sage);">Live Appointment Summary</span>
+              <h3 class="heading-md" style="color: var(--clr-white); margin-bottom: 16px;">Your Care Configuration</h3>
+
+              <div class="summary-row">
+                <span>Selected Service</span>
+                <strong id="sum-service">Sofa Cleaning</strong>
+              </div>
+              <div class="summary-row">
+                <span>Furniture &amp; Size</span>
+                <strong id="sum-furniture">1 &times; 3-Seater Living Room Sofa (Standard / 3-Seater)</strong>
+              </div>
+              <div class="summary-row">
+                <span>Upholstery Fabric</span>
+                <strong id="sum-fabric">Woven Polyester &amp; Synthetic Blends</strong>
+              </div>
+              <div class="summary-row">
+                <span>Preferred Date</span>
+                <strong id="sum-date">Selected Date</strong>
+              </div>
+              <div class="summary-row">
+                <span>Demo Time Window</span>
+                <strong id="sum-time">10:00 AM – 12:00 PM (Morning)</strong>
+              </div>
+              <div class="summary-row">
+                <span>Customer Name</span>
+                <strong id="sum-customer">Guest Customer</strong>
+              </div>
+
+              <div class="summary-total">
+                <div>
+                  <span style="font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--clr-sage); display: block;">Estimated Total</span>
+                  <strong id="sum-estimate" style="font-size: 1.35rem; color: var(--clr-white);">$95 USD (Illustrative Demo Estimate)</strong>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </form>
+  </main>
+
+  <!-- ==================== GLOBAL FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 16px;">
+            <span class="brand-logo__mark">
+              <img src="images/logo.png" alt="Verdant Upholstery Care Logo" width="58" height="42">
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name" style="color: var(--clr-white);">VERDANT</span>
+              <span class="brand-logo__sub" style="color: var(--clr-sage);">UPHOLSTERY CARE</span>
+            </span>
+          </a>
+          <p style="font-size: 0.9rem; margin-bottom: 16px;">Professional sofa, furniture, and upholstery cleaning that removes everyday dirt, tackles stubborn stains, and refreshes the furniture you love.</p>
+                    <div class="footer-social-links" aria-label="Follow Verdant Upholstery Care">
+            <a href="https://facebook.com" class="footer-social-icon" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://instagram.com" class="footer-social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://twitter.com" class="footer-social-icon" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4l11.733 16h4.267l-11.733 -16z"/><path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"/></svg>
+            </a>
+            <a href="https://linkedin.com" class="footer-social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://youtube.com" class="footer-social-icon" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="home-2.html">Home 2</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>OUR SERVICES</h4>
+          <ul class="footer-links">
+            <li><a href="services.html#sofa-cleaning">Sofa Cleaning</a></li>
+            <li><a href="services.html#chair-cleaning">Chair Cleaning</a></li>
+            <li><a href="services.html#curtain-mattress">Curtain Cleaning</a></li>
+            <li><a href="services.html#curtain-mattress">Mattress Cleaning</a></li>
+            <li><a href="services.html#specialized-care">Stain Treatment</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CUSTOMER</h4>
+          <ul class="footer-links">
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="booking.html">Book a Cleaning</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="dashboard.html">Customer Dashboard</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>CONTACT &amp; NEWSLETTER</h4>
+          <ul class="footer-links" style="margin-bottom: 14px;">
+            <li>Phone: +1 (555) 482-9100 (Demo)</li>
+            <li>Email: care@verdantupholstery.example</li>
+            <li>Area: Greater Metro &amp; Surrounding Suburbs</li>
+          </ul>
+          <form class="newsletter-form" aria-label="Newsletter Subscription">
+            <input type="email" class="newsletter-input" placeholder="Enter your email" required aria-label="Email address">
+            <button type="submit" class="btn btn--sage btn--sm">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 VERDANT UPHOLSTERY CARE. All rights reserved. Illustrative frontend demonstration experience.</p>
+        <div style="display: flex; gap: 20px;">
+          <a href="pricing.html">Transparent Pricing</a>
+          <a href="booking.html">Book Online</a>
+          <a href="contact.html">Support</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button type="button" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.4"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

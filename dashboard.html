@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Dashboard &amp; Service Tracker | VERDANT Upholstery Care</title>
+  <meta name="description" content="Manage your upcoming sofa and upholstery cleaning appointments, track 5-stage service status, review cleaning history, and update your profile.">
+  <meta property="og:title" content="VERDANT Upholstery Care — Customer Dashboard">
+  <meta property="og:description" content="Personalized upholstery care portal with live 5-stage service tracking.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- Top Bar on Mobile & Tablet (<= 1024px) with Brand Logo and Hamburger Button -->
+  <header class="dashboard-topbar">
+    <a href="index.html" class="brand-logo" title="Back to Main Website">
+      <span class="brand-logo__mark">
+        <img src="images/logo.png" alt="Verdant Upholstery Care Logo" width="58" height="42">
+      </span>
+      <span class="brand-logo__text">
+        <span class="brand-logo__name" style="color: var(--clr-white);">VERDANT</span>
+        <span class="brand-logo__sub" style="color: var(--clr-sage);">CUSTOMER PORTAL</span>
+      </span>
+    </a>
+    <div class="dashboard-topbar__actions">
+      <button type="button" class="hamburger-btn" data-dash-drawer-open aria-label="Open Navigation Menu">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile & Tablet Drawer Backdrop -->
+  <div class="dashboard-drawer-backdrop" data-dash-drawer-close aria-hidden="true"></div>
+
+  <!-- ==================== DEDICATED CUSTOMER DASHBOARD APPLICATION ==================== -->
+  <div class="dashboard-shell">
+    <!-- LEFT SIDEBAR NAVIGATION (Desktop: Sticky Column; Mobile/Tablet: Slide-in Drawer) -->
+    <aside class="dashboard-sidebar" aria-label="Customer Portal Navigation">
+      <div>
+        <div class="dashboard-sidebar__header">
+          <!-- Portal Brand Header & Website Return -->
+          <a href="index.html" class="brand-logo" title="Back to Main Website">
+            <span class="brand-logo__mark">
+              <img src="images/logo.png" alt="Verdant Upholstery Care Logo" width="58" height="42">
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name" style="color: var(--clr-white);">VERDANT</span>
+              <span class="brand-logo__sub" style="color: var(--clr-sage);">CUSTOMER PORTAL</span>
+            </span>
+          </a>
+          <button type="button" class="dashboard-sidebar__close" data-dash-drawer-close aria-label="Close Navigation Drawer">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+
+        <div class="dashboard-user-card">
+          <span class="eyebrow" style="color: var(--clr-sage); font-size: 0.7rem; margin-bottom: 4px; display: block;">ACTIVE DEMO ACCOUNT</span>
+          <div class="dashboard-user-card__name" id="dash-sidebar-name">Eleanor Vance</div>
+          <div class="dashboard-user-card__email" id="dash-sidebar-email">eleanor.vance@example.com</div>
+        </div>
+
+        <nav class="dashboard-nav" aria-label="Dashboard Sections">
+          <button type="button" class="dashboard-nav__btn is-active" data-dash-nav="dash-overview">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            <span>Overview</span>
+          </button>
+          <button type="button" class="dashboard-nav__btn" data-dash-nav="dash-upcoming">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            <span>My Bookings</span>
+          </button>
+          <button type="button" class="dashboard-nav__btn" data-dash-nav="dash-tracking">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            <span>Track Service</span>
+          </button>
+          <button type="button" class="dashboard-nav__btn" data-dash-nav="dash-history">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Booking History</span>
+          </button>
+          <button type="button" class="dashboard-nav__btn" data-dash-nav="dash-profile">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <span>My Profile</span>
+          </button>
+          <button type="button" class="dashboard-nav__btn" data-dash-nav="dash-settings">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+            <span>Settings</span>
+          </button>
+        </nav>
+      </div>
+
+      <div class="dashboard-sidebar__actions">
+        <a href="booking.html" class="btn btn--sage btn--full btn--sm" style="margin-bottom: 10px;">+ New Cleaning Booking</a>
+        <a href="index.html" class="dashboard-nav__btn" style="color: rgba(255, 255, 255, 0.88); margin-bottom: 6px;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          <span>Exit to Website</span>
+        </a>
+        <button type="button" class="dashboard-nav__btn" data-dash-nav="logout" style="color: #F4B4AE; margin-bottom: 8px;">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          <span>Logout Demo Session</span>
+        </button>
+        <div class="dash-weblinks-panel" style="margin-top: 14px; padding-top: 14px; border-top: 1px solid rgba(46, 204, 143, 0.22);">
+          <span style="font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--clr-sage); display: block; margin-bottom: 8px;">Explore Full Website</span>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 6px;">
+            <a href="services.html" class="dash-quick-link" title="Explore Cleaning Services">Services</a>
+            <a href="pricing.html" class="dash-quick-link" title="View Packages &amp; Rates">Pricing</a>
+            <a href="gallery.html" class="dash-quick-link" title="Before &amp; After Gallery">Gallery</a>
+            <a href="booking.html" class="dash-quick-link" title="Book Cleaning Appointment">Booking</a>
+            <a href="about.html" class="dash-quick-link" title="About Our Brand">About</a>
+            <a href="contact.html" class="dash-quick-link" title="Contact &amp; Consultation">Contact</a>
+          </div>
+        </div>
+        <div class="drawer-toggles-row" style="margin-top: 10px;">
+          <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle Light/Dark Theme">
+            <svg class="theme-toggle__icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="theme-toggle__icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button type="button" class="rtl-toggle-btn" data-rtl-toggle aria-label="Toggle RTL Direction">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="21" y1="8" x2="3" y2="8"/><line x1="21" y1="16" x2="3" y2="16"/><polyline points="7 4 3 8 7 12"/><polyline points="17 12 21 16 17 20"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN DASHBOARD WORKSPACE (MULTI-VIEW SPA CONTAINER) -->
+    <main class="dashboard-main">
+
+      <!-- ==================== VIEW 01 — OVERVIEW (DEFAULT ACTIVE) ==================== -->
+      <div class="dash-view is-active" data-dash-view="dash-overview">
+        <section class="dash-panel" id="dash-overview">
+          <div class="dash-panel__header">
+            <div>
+              <span class="eyebrow">01 • Customer Portal Overview</span>
+              <h1 class="heading-lg" id="dash-welcome-name">WELCOME BACK, ELEANOR VANCE.</h1>
+              <p id="dash-session-notice" style="font-size: 0.9rem; color: var(--text-muted); margin-top: 4px;">
+                All appointments you create on the Booking page are stored in your browser and managed across your portal tabs.
+              </p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="booking.html" class="btn btn--primary btn--sm">Book Another Service</a>
+              <button type="button" class="btn btn--outline btn--sm" data-dash-switch="dash-tracking">Jump to Live Tracker</button>
+            </div>
+          </div>
+
+          <!-- Strict 4-Card Summary Grid -->
+          <div class="dash-stats-grid">
+            <div class="dash-stat-card">
+              <span class="dash-stat-card__label">Total Bookings</span>
+              <div class="dash-stat-card__value" id="stat-total-bookings">3</div>
+              <span class="dash-stat-card__sub">All-time scheduled visits</span>
+            </div>
+
+            <div class="dash-stat-card">
+              <span class="dash-stat-card__label">Upcoming Bookings</span>
+              <div class="dash-stat-card__value" id="stat-upcoming-bookings">2</div>
+              <span class="dash-stat-card__sub">Active appointments</span>
+            </div>
+
+            <div class="dash-stat-card">
+              <span class="dash-stat-card__label">Completed Cleanings</span>
+              <div class="dash-stat-card__value" id="stat-completed-bookings">1</div>
+              <span class="dash-stat-card__sub">Restored upholstery items</span>
+            </div>
+
+            <div class="dash-stat-card">
+              <span class="dash-stat-card__label">Pending Requests</span>
+              <div class="dash-stat-card__value" id="stat-pending-bookings">1</div>
+              <span class="dash-stat-card__sub">Awaiting coordinator review</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Overview Workspace Navigation Cards -->
+        <section class="dash-panel">
+          <div class="dash-panel__header" style="margin-bottom: 16px;">
+            <div>
+              <span class="eyebrow">02 • Portal Modules</span>
+              <h2 class="heading-md">MANAGE YOUR UPHOLSTERY CARE</h2>
+            </div>
+            <button type="button" class="btn btn--outline btn--sm" data-dash-switch="dash-upcoming">Open My Bookings &rarr;</button>
+          </div>
+
+          <div class="dash-overview-modules">
+            <div class="dash-module-card">
+              <div>
+                <span class="badge-demo" style="margin-bottom: 8px;">Active Schedule</span>
+                <h3 class="heading-sm">My Upcoming Bookings</h3>
+                <p>Inspect your scheduled sofa, chair, and curtain cleaning dates, time windows, and furniture quantities.</p>
+              </div>
+              <button type="button" class="btn btn--primary btn--sm" data-dash-switch="dash-upcoming">Go to My Bookings &rarr;</button>
+            </div>
+
+            <div class="dash-module-card">
+              <div>
+                <span class="badge-demo" style="margin-bottom: 8px;">Real-Time Status</span>
+                <h3 class="heading-sm">Live 5-Stage Service Tracker</h3>
+                <p>Follow your appointment from Request Received through On-Site Extraction and Service Completion.</p>
+              </div>
+              <button type="button" class="btn btn--primary btn--sm" data-dash-switch="dash-tracking">Open Service Tracker &rarr;</button>
+            </div>
+
+            <div class="dash-module-card">
+              <div>
+                <span class="badge-demo" style="margin-bottom: 8px;">Care Archive</span>
+                <h3 class="heading-sm">Cleaning &amp; Booking History</h3>
+                <p>Review past upholstery care records, fabric notes, and sample estimates or rebook a completed visit.</p>
+              </div>
+              <button type="button" class="btn btn--outline btn--sm" data-dash-switch="dash-history">View Booking History &rarr;</button>
+            </div>
+
+            <div class="dash-module-card">
+              <div>
+                <span class="badge-demo" style="margin-bottom: 8px;">Account &amp; Preferences</span>
+                <h3 class="heading-sm">Profile &amp; Portal Settings</h3>
+                <p>Update your saved household address, contact phone number, notification alerts, and theme mode.</p>
+              </div>
+              <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+                <button type="button" class="btn btn--outline btn--sm" data-dash-switch="dash-profile">My Profile</button>
+                <button type="button" class="btn btn--outline btn--sm" data-dash-switch="dash-settings">Settings</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Quick Portal Shortcuts -->
+        <section class="dash-panel" id="dash-quick-actions">
+          <div style="margin-bottom: 18px;">
+            <span class="eyebrow">03 • Website Shortcuts</span>
+            <h2 class="heading-md">QUICK PORTAL ACTIONS</h2>
+          </div>
+
+          <div class="dash-shortcuts-grid">
+            <article class="feature-card">
+              <h3 class="heading-sm" style="margin-bottom: 8px;">Book New Cleaning</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Schedule a sofa, armchair, curtain, or mattress appointment with instant dashboard sync.</p>
+              <a href="booking.html" class="btn btn--primary btn--sm">Book Now &rarr;</a>
+            </article>
+
+            <article class="feature-card">
+              <h3 class="heading-sm" style="margin-bottom: 8px;">View Services</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Explore our dedicated sofa, chair, curtain, mattress, and specialized stain protocols.</p>
+              <a href="services.html" class="btn btn--outline btn--sm">Explore Services</a>
+            </article>
+
+            <article class="feature-card">
+              <h3 class="heading-sm" style="margin-bottom: 8px;">View Pricing</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Compare single sofa, full sofa set, chair bundle, and curtain steaming sample rates.</p>
+              <a href="pricing.html" class="btn btn--outline btn--sm">Compare Pricing</a>
+            </article>
+
+            <article class="feature-card">
+              <h3 class="heading-sm" style="margin-bottom: 8px;">Contact Support</h3>
+              <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 16px;">Have a question about an upcoming slot or a delicate upholstery fabric tag?</p>
+              <button type="button" class="btn btn--outline btn--sm" data-open-enquiry="Customer Dashboard Support Request">Message Support</button>
+            </article>
+          </div>
+        </section>
+      </div>
+
+      <!-- ==================== VIEW 02 — MY BOOKINGS ==================== -->
+      <div class="dash-view" data-dash-view="dash-upcoming">
+        <section class="dash-panel" id="dash-upcoming">
+          <div class="dash-panel__header">
+            <div>
+              <span class="eyebrow">Customer Portal • Active Schedule</span>
+              <h2 class="heading-lg">MY UPCOMING BOOKINGS</h2>
+              <p style="font-size: 0.92rem; color: var(--text-muted); margin-top: 4px;">
+                Review your scheduled upholstery care visits, inspect fabric specifications, or launch the live 5-stage tracker.
+              </p>
+            </div>
+            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+              <a href="booking.html" class="btn btn--primary btn--sm">+ Schedule New Appointment</a>
+              <button type="button" class="btn btn--outline btn--sm" data-dash-switch="dash-tracking">Track Active Service &rarr;</button>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table" aria-label="Upcoming Bookings Table">
+              <thead>
+                <tr>
+                  <th>Booking ID</th>
+                  <th>Service Type</th>
+                  <th>Furniture Item (Qty)</th>
+                  <th>Selected Date</th>
+                  <th>Selected Time Slot</th>
+                  <th>Booking Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="dash-upcoming-tbody">
+                <!-- Populated dynamically by assets/js/main.js -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="dash-panel">
+          <div style="margin-bottom: 16px;">
+            <span class="eyebrow">Pre-Visit Preparation</span>
+            <h3 class="heading-md">HOW TO PREPARE FOR YOUR TECHNICIAN VISIT</h3>
+          </div>
+          <div class="dash-prep-grid">
+            <div class="dash-prep-item">
+              <strong>01. Clear Walkways &amp; Throw Items</strong>
+              <p>Remove fragile side-table decor and non-upholstered throw blankets around the sofa or curtains being treated.</p>
+            </div>
+            <div class="dash-prep-item">
+              <strong>02. Note Specific Spill Zones</strong>
+              <p>Point out any coffee, wine, food oil, or pet spots during the initial walkthrough so we can pre-treat them first.</p>
+            </div>
+            <div class="dash-prep-item">
+              <strong>03. Allow 2–4 Hours Airflow Drying</strong>
+              <p>Keep normal room ventilation or ceiling fans running after extraction for rapid, even fabric drying.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ==================== VIEW 03 — TRACK SERVICE (5 STAGES) ==================== -->
+      <div class="dash-view" data-dash-view="dash-tracking">
+        <section class="dash-panel" id="dash-tracking">
+          <div class="dash-panel__header">
+            <div>
+              <span class="eyebrow">Customer Portal • Real-Time Progress Visualizer</span>
+              <h2 class="heading-lg">LIVE 5-STAGE SERVICE TRACKING</h2>
+              <p id="dash-track-meta" style="font-size: 0.92rem; color: var(--text-muted); margin-top: 4px;">
+                Select any booking below to view its current care stage.
+              </p>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; align-items: center;">
+              <label for="dash-track-select" style="font-size: 0.84rem; font-weight: 700;">Select Booking:</label>
+              <select id="dash-track-select" class="form-select" style="width: auto; min-width: 250px; padding: 9px 14px;"></select>
+              <button type="button" id="dash-advance-stage-btn" class="btn btn--primary btn--sm">
+                Simulate Next Stage &rarr;
+              </button>
+            </div>
+          </div>
+
+          <!-- 5-Stage Progress Timeline -->
+          <div class="tracking-steps" id="dash-tracking-steps" aria-live="polite">
+            <!-- Populated dynamically by assets/js/main.js -->
+          </div>
+        </section>
+
+        <section class="dash-panel">
+          <div class="dash-panel__header" style="margin-bottom: 16px;">
+            <div>
+              <span class="eyebrow">On-Site Quality Standard</span>
+              <h3 class="heading-md">WHAT HAPPENS DURING ON-SITE EXTRACTION</h3>
+            </div>
+            <button type="button" class="btn btn--outline btn--sm" data-dash-switch="dash-upcoming">Back to My Bookings</button>
+          </div>
+          <div class="dash-prep-grid">
+            <div class="dash-prep-item">
+              <strong>Fibre &amp; Dye Verification</strong>
+              <p>Every appointment starts with a manufacturer tag check (W, S, W/S, X, L) and an inconspicuous seam colourfastness test.</p>
+            </div>
+            <div class="dash-prep-item">
+              <strong>HEPA Vacuum &amp; Pre-Spray</strong>
+              <p>Dry soil and allergens are extracted from deep cushion crevices before eco-conscious enzymatic pre-conditioners are applied.</p>
+            </div>
+            <div class="dash-prep-item">
+              <strong>Clear-Nozzle Rinse &amp; Pile Grooming</strong>
+              <p>Controlled spray-extraction flushes out suspended dirt until rinse water runs clear, followed by directional nap grooming.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ==================== VIEW 04 — BOOKING HISTORY ==================== -->
+      <div class="dash-view" data-dash-view="dash-history">
+        <section class="dash-panel" id="dash-history">
+          <div class="dash-panel__header">
+            <div>
+              <span class="eyebrow">Customer Portal • Complete Service Log</span>
+              <h2 class="heading-lg">CLEANING &amp; BOOKING HISTORY</h2>
+              <p style="font-size: 0.92rem; color: var(--text-muted); margin-top: 4px;">
+                Inspect every past and current upholstery care record or click "View Details" for full fabric and technician notes.
+              </p>
+            </div>
+            <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+              <span class="badge-demo">Click "View Details" to inspect full care notes</span>
+              <a href="booking.html" class="btn btn--primary btn--sm">Rebook a Service &rarr;</a>
+            </div>
+          </div>
+
+          <div class="table-wrap">
+            <table class="data-table" aria-label="Cleaning History Table">
+              <thead>
+                <tr>
+                  <th>Booking Reference</th>
+                  <th>Furniture Cleaned</th>
+                  <th>Service Date</th>
+                  <th>Status</th>
+                  <th>Details</th>
+                </tr>
+              </thead>
+              <tbody id="dash-history-tbody">
+                <!-- Populated dynamically by assets/js/main.js -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <!-- ==================== VIEW 05 — MY PROFILE ==================== -->
+      <div class="dash-view" data-dash-view="dash-profile">
+        <section class="dash-panel" id="dash-profile">
+          <div class="dash-panel__header">
+            <div>
+              <span class="eyebrow">Customer Portal • Account Details</span>
+              <h2 class="heading-lg">MY CUSTOMER PROFILE</h2>
+              <p style="font-size: 0.92rem; color: var(--text-muted); margin-top: 4px;">
+                Update your contact details and household address. Changes persist in your browser session and pre-fill your future bookings.
+              </p>
+            </div>
+            <span class="badge-demo">Verified Residential Account</span>
+          </div>
+
+          <form id="dash-profile-form" novalidate>
+            <div class="form-grid-2" style="margin-bottom: 18px;">
+              <div class="form-group">
+                <label class="form-label" for="pf-name">Full Name</label>
+                <input type="text" id="pf-name" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pf-email">Email Address</label>
+                <input type="email" id="pf-email" class="form-input" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2" style="margin-bottom: 18px;">
+              <div class="form-group">
+                <label class="form-label" for="pf-phone">Phone Number</label>
+                <input type="tel" id="pf-phone" class="form-input" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pf-address">Primary Service Address</label>
+                <input type="text" id="pf-address" class="form-input" required>
+              </div>
+            </div>
+
+            <div class="form-grid-2" style="margin-bottom: 20px;">
+              <div class="form-group">
+                <label class="form-label" for="pf-fabric-pref">Primary Household Upholstery Type</label>
+                <select id="pf-fabric-pref" class="form-select">
+                  <option value="Woven Linen & Cotton Blend">Woven Linen &amp; Cotton Blend</option>
+                  <option value="Velvet & Bouclé Accent Seating">Velvet &amp; Bouclé Accent Seating</option>
+                  <option value="Performance Microfiber (Pet Household)">Performance Microfiber (Pet Household)</option>
+                  <option value="Protected & Aniline Leather">Protected &amp; Aniline Leather</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="pf-access-notes">Building Access &amp; Parking Notes</label>
+                <input type="text" id="pf-access-notes" class="form-input" placeholder="e.g. Driveway parking available, gate code #104">
+              </div>
+            </div>
+
+            <div id="pf-save-msg" class="alert-banner" style="display: none; margin-bottom: 16px;"></div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center;">
+              <button type="submit" class="btn btn--primary btn--sm">Save Profile Details</button>
+              <button type="button" class="btn btn--outline btn--sm" data-dash-switch="dash-settings">Configure Portal Settings &rarr;</button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <!-- ==================== VIEW 06 — SETTINGS ==================== -->
+      <div class="dash-view" data-dash-view="dash-settings">
+        <section class="dash-panel" id="dash-settings">
+          <div class="dash-panel__header">
+            <div>
+              <span class="eyebrow">Customer Portal • Preferences &amp; Appearance</span>
+              <h2 class="heading-lg">PORTAL SETTINGS</h2>
+              <p style="font-size: 0.92rem; color: var(--text-muted); margin-top: 4px;">
+                Customise your dashboard appearance mode, appointment notification alerts, and demo session data.
+              </p>
+            </div>
+            <button type="button" class="btn btn--outline btn--sm" data-theme-toggle>Toggle Light / Dark Theme</button>
+          </div>
+
+          <form id="dash-settings-form" novalidate>
+            <div class="dash-settings-list">
+              <label class="dash-setting-row">
+                <div>
+                  <strong>SMS Technician Arrival Alerts</strong>
+                  <p>Receive a text notification 30 minutes before your mobile upholstery care team arrives.</p>
+                </div>
+                <input type="checkbox" checked>
+              </label>
+
+              <label class="dash-setting-row">
+                <div>
+                  <strong>Digital Care Report &amp; Fibre Log</strong>
+                  <p>Automatically email a post-cleaning inspection summary and stain treatment record after each visit.</p>
+                </div>
+                <input type="checkbox" checked>
+              </label>
+
+              <label class="dash-setting-row">
+                <div>
+                  <strong>Seasonal 6-Month Upholstery Refresh Reminder</strong>
+                  <p>Receive a gentle reminder when your living room sofas and curtains are due for routine allergen extraction.</p>
+                </div>
+                <input type="checkbox" checked>
+              </label>
+            </div>
+
+            <div id="st-save-msg" class="alert-banner" style="display: none; margin-top: 16px;"></div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 22px;">
+              <button type="submit" class="btn btn--primary btn--sm">Save Portal Settings</button>
+              <button type="button" class="btn btn--outline btn--sm" data-theme-toggle>Switch Light / Dark Appearance</button>
+              <button type="button" class="btn btn--outline btn--sm" id="dash-reset-demo-btn">Reset Sample Bookings</button>
+            </div>
+          </form>
+        </section>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ==================== BOOKING DETAILS MODAL ==================== -->
+  <div class="modal-backdrop" id="booking-detail-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="bm-modal-title">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div>
+          <span class="eyebrow" style="margin-bottom: 4px;">Appointment Specification</span>
+          <h3 class="heading-md" id="bm-modal-title">Booking Reference: <span data-bm-id>VRD-2026</span></h3>
+        </div>
+        <button type="button" class="modal-close" data-modal-close aria-label="Close Booking Detail Modal">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid-2" style="gap: 14px; margin-bottom: 18px;">
+          <div style="padding: 14px; border-radius: var(--radius-sm); background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+            <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); display: block;">Service Type</span>
+            <strong data-bm-service style="font-size: 0.98rem;">Sofa Cleaning</strong>
+          </div>
+          <div style="padding: 14px; border-radius: var(--radius-sm); background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+            <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); display: block;">Current Status</span>
+            <strong data-bm-status style="font-size: 0.98rem; color: var(--clr-primary);">Appointment Scheduled</strong>
+          </div>
+          <div style="padding: 14px; border-radius: var(--radius-sm); background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+            <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); display: block;">Furniture &amp; Quantity</span>
+            <strong data-bm-furniture style="font-size: 0.95rem;">1 &times; 3-Seater Sofa</strong>
+          </div>
+          <div style="padding: 14px; border-radius: var(--radius-sm); background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+            <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); display: block;">Upholstery Fabric</span>
+            <strong data-bm-fabric style="font-size: 0.95rem;">Woven Linen Blend</strong>
+          </div>
+          <div style="padding: 14px; border-radius: var(--radius-sm); background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+            <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); display: block;">Date &amp; Time Window</span>
+            <strong data-bm-datetime style="font-size: 0.95rem;">2026-11-18 • Morning</strong>
+          </div>
+          <div style="padding: 14px; border-radius: var(--radius-sm); background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+            <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); display: block;">Estimated Rate</span>
+            <strong data-bm-estimate style="font-size: 0.95rem;">$95 (Sample Estimate)</strong>
+          </div>
+        </div>
+
+        <div style="padding: 14px; border-radius: var(--radius-sm); background: var(--bg-surface); border: 1px solid var(--border-subtle); margin-bottom: 14px;">
+          <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); display: block;">Service Address</span>
+          <strong data-bm-address style="font-size: 0.92rem;">742 Evergreen Terrace</strong>
+        </div>
+
+        <div style="padding: 14px; border-radius: var(--radius-sm); background: var(--bg-surface); border: 1px solid var(--border-subtle);">
+          <span style="font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); display: block;">Technician &amp; Stain Notes</span>
+          <p data-bm-notes style="font-size: 0.9rem; color: var(--text-body); margin-top: 4px;"></p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; margin-top: 22px;">
+          <button type="button" class="btn btn--outline btn--sm" data-modal-close>Close Window</button>
+          <a href="booking.html" class="btn btn--primary btn--sm">Rebook Similar Service</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

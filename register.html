@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Customer Account | VERDANT Upholstery Care</title>
+  <meta name="description" content="Register for a VERDANT Upholstery Care customer account to book sofa and upholstery cleanings faster and track every appointment.">
+  <meta property="og:title" content="VERDANT Upholstery Care — Customer Registration">
+  <meta property="og:description" content="Create your customer account to manage upholstery bookings and fabric care history.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <main>
+    <!-- ==================== CENTERED REGISTRATION PORTAL (NO IMAGES) ==================== -->
+    <section class="auth-centered-page" aria-label="Customer Registration Portal">
+      <!-- Top Right Floating Controls -->
+      <div class="auth-top-actions">
+        <button type="button" class="theme-toggle" data-theme-toggle aria-label="Toggle Light and Dark Theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <button type="button" class="rtl-toggle-btn" data-rtl-toggle aria-label="Toggle Direction" title="Toggle RTL / LTR Direction">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M8 7h12m0 0l-4-4m4 4l-4 4"/>
+            <path d="M16 17H4m0 0l4 4m-4-4l4-4"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- CENTERED REGISTRATION FORM CARD -->
+      <div class="auth-box form-card reveal">
+        <div style="margin-bottom: 24px; text-align: center;">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 16px; display: inline-flex;" title="Verdant Upholstery Care">
+            <span class="brand-logo__mark">
+              <img src="images/logo.png" alt="Verdant Upholstery Care Logo" width="58" height="42">
+            </span>
+            <span class="brand-logo__text">
+              <span class="brand-logo__name">VERDANT</span>
+              <span class="brand-logo__sub">UPHOLSTERY CARE</span>
+            </span>
+          </a>
+          <div>
+            <span class="badge-demo" style="margin-bottom: 8px;">Customer Portal Access</span>
+            <h1 class="heading-lg" style="margin-bottom: 6px;">Create Customer Account</h1>
+            <p style="font-size: 0.92rem; color: var(--text-muted); max-width: 440px; margin-inline: auto;">
+              Complete the form below to create your demo account and open your Customer Dashboard immediately.
+            </p>
+          </div>
+        </div>
+
+        <div id="register-feedback" class="alert-banner" style="display: none; margin-bottom: 20px;"></div>
+
+        <form id="demo-register-form" novalidate>
+          <div class="form-group" style="margin-bottom: 16px;">
+            <label class="form-label" for="reg-name">Full Name *</label>
+            <input type="text" id="reg-name" class="form-input" placeholder="e.g., Julian Vance" required>
+          </div>
+
+          <div class="form-grid-2" style="margin-bottom: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="reg-email">Email Address *</label>
+              <input type="email" id="reg-email" class="form-input" placeholder="you@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-phone">Phone Number *</label>
+              <input type="tel" id="reg-phone" class="form-input" placeholder="+1 (555) 390-1120" required>
+            </div>
+          </div>
+
+          <div class="form-grid-2" style="margin-bottom: 16px;">
+            <div class="form-group">
+              <label class="form-label" for="reg-password">Password (Min 6 chars) *</label>
+              <div class="pwd-input-wrap">
+                <input type="password" id="reg-password" class="form-input" placeholder="Create password" required>
+                <button type="button" class="pwd-toggle-btn" data-toggle-password="reg-password">Show</button>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="reg-confirm">Confirm Password *</label>
+              <div class="pwd-input-wrap">
+                <input type="password" id="reg-confirm" class="form-input" placeholder="Repeat password" required>
+                <button type="button" class="pwd-toggle-btn" data-toggle-password="reg-confirm">Show</button>
+              </div>
+            </div>
+          </div>
+
+          <p class="form-hint" style="margin-bottom: 16px;">
+            Privacy &amp; security note: Raw passwords are validated in memory only and are never saved in browser localStorage.
+          </p>
+
+          <label style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.88rem; margin-bottom: 22px; cursor: pointer;">
+            <input type="checkbox" id="reg-terms" checked style="margin-top: 4px; accent-color: var(--clr-primary);">
+            <span>I agree to the VERDANT Upholstery Care demonstration portal terms and fabric inspection guidelines.</span>
+          </label>
+
+          <button type="submit" class="btn btn--primary btn--full">
+            <span>Create Account &amp; Open Dashboard</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="20 6 9 17 4 12"/></svg>
+          </button>
+        </form>
+
+        <div style="margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--border-subtle); text-align: center; font-size: 0.9rem;">
+          <span>Already have a customer account?</span>
+          <a href="login.html" style="color: var(--clr-primary); font-weight: 700; margin-left: 6px;">Sign In Here &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
